@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Tracking Color Blocks</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Eye Tracking Demo</h1>
+            <p id="status-message">Please start eye tracking</p>
+            <p>Currently looking at: <span id="current-block">None</span></p>
+        </header>
+        
+        <div class="color-blocks">
+            <div id="red" class="color-block red"></div>
+            <div id="blue" class="color-block blue"></div>
+            <div id="green" class="color-block green"></div>
+            <div id="yellow" class="color-block yellow"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="calibrate" class="button calibrate">Calibrate</button>
+            <button id="start-tracking" class="button start">Start Eye Tracking</button>
+            <button id="stop-tracking" class="button stop">Stop</button>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
