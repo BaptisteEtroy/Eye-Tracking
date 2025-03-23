@@ -138,9 +138,12 @@ def ensure_point_format(point):
         print(f"Error converting point: {e} - {type(point)} - {point}")
         return (0, 0)  # Default fallback
 
-# Create named window and set to fullscreen
+# Create named window and set to a large window
 cv2.namedWindow("Eye Tracking Calibration", cv2.WINDOW_NORMAL)
-cv2.setWindowProperty("Eye Tracking Calibration", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+# Set window size to almost match screen resolution with minimal margins
+cv2.resizeWindow("Eye Tracking Calibration", display_width - 2, display_height - 2)
+# Don't use fullscreen mode as it's causing issues
+# cv2.setWindowProperty("Eye Tracking Calibration", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
 # Main loop
 running = True
